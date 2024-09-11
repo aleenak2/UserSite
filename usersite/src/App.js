@@ -8,7 +8,7 @@ import CV from './routes/CV';
 import Service from './routes/Service';
 import Teaching from './routes/Teaching';
 import Navbar from '.Navbar';
-import Footer from '.Footer';
+import Footerbar from '.Footerbar';
 
 function App() {
 
@@ -25,7 +25,7 @@ function App() {
           <Route path="/Teaching" element={<Teaching />}/>
         </Routes>
       </BrowserRouter>
-      <Footer />
+      <Footerbar />
     </>
   );
 }

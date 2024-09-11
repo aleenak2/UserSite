@@ -1,6 +1,6 @@
 import 'bootstrap';
 
-const Footer =()=>{
+const Footerbar =()=>{
     return (
         <div style="position: absolute;bottom: 0;width:100vw; max-width: 100vw;">
             <div class="row" style="background-color: darkgrey;">
@@ -24,4 +24,4 @@ const Footer =()=>{
     )
 }
 
-export default Footer;
+export default Footerbar;
