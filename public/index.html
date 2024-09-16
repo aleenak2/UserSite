@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <!-- Homepage Template-->
-<html>
+<html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">
 	<head>
 		<title>Home</title>
 		<meta charset="utf-8" />
@@ -11,6 +11,25 @@
 	</head>
 
     <style>
+
+        .mainBody {
+            margin: 0 0;
+            /*background-color:rgb(201, 230, 253);*/
+            background-image: linear-gradient(to right, #e7d9bd, rgb(201, 230, 253));
+            width:100vw;
+            min-width:min-content;
+            max-width:100%;
+            min-height:100vh;
+            display:flex;
+            flex-direction:column;
+            font-family: Georgia,'Times New Roman',Times,serif;
+        }
+
+        .navIcons {
+            width: 40px; 
+            height: 40px; 
+            margin: 5px 10px;
+        }
 
         .headshot {
             display: block;
@@ -29,14 +48,70 @@
             font-weight: bold;
         }
 
+        .col2 {
+            margin: auto;
+            height: auto;
+            min-width: fit-content;
+            max-width: max-content;
+            justify-content: left;
+            text-align: left;
+            padding-right: 3%;
+        }
+
+        .colAwards, .colEducation, .colInstruction, .colPedagogy, .colSoftware, .colWPapers {
+            width: auto;
+            margin-left: 3%;
+            min-width: fit-content;
+        }
+        .ftrow {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            max-width: 100%;
+            background-color: #949494;
+            min-height: fit-content;
+        }
+
+        .cRight {
+            text-align: right;
+            margin: 0 0;
+            font-size: 0.75em;
+        }
+
+        .btnNav {
+            display: inline-block;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            text-align: center;
+            text-decoration: none;
+            vertical-align: middle;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-color: transparent;
+            border: 0.125rem solid;
+            border-color: #f8f9fa;
+            padding: 0.375rem 0.75rem;
+            border-radius: 100%;
+            width: 3.75rem;
+            height: 3.75rem;
+            margin: 5px 10px;
+            font-size: 1.625rem;
+            justify-content: center;
+            align-items: center;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+
     </style>
 
-    <body style="margin:0 0;background-color:rgb(201, 230, 253);width:100vw;min-height:100vh;max-width:100%;display:flex;flex-direction:column;font-family: Georgia,'Times New Roman',Times,serif;min-width:fit-content">
-        
-        <div style="min-height: fit-content;max-height: max-content">
+    <body class="mainBody">
+        <div style="min-height:fit-content;max-height:max-content;">
             <!-- Header -->
             <header id="header">
-                <nav class="navbar navbar-expand-lg bg-dark navbar-dark" style="padding-left: 1.5%;">
+                <nav class="navbar navbar-expand-lg bg-dark navbar-dark" style="padding-left:1.5%;">
                     <a class="navbar-brand" href="" style="pointer-events: none">
                         <h3 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><strong>Aleena Khan, Ph.D.</strong></h3>
                     </a>
@@ -51,9 +126,18 @@
                         </ul>
                     </div>   
                     <div class="d-flex justify-content-end">
-                        <div class="row">
-                            <a href="https://x.com/aleenakhxn"><img src="images/twitter.png" alt="Twitter Icon" target="_blank" rel="noopener noreferrer" style="width:30px; height:30px; margin:5px 10px"/></a>
-                            <a href="https://www.linkedin.com/in/aleena-khan-06b90a78"><img src="images/linkedin.png" alt="LinkedIn Icon" target="_blank" rel="noopener noreferrer" style="width:30px; height:30px; margin:5px 10px;"/></a>
+                        <!--Social Buttons-->
+                        <div style="justify-content: space-around;">
+                            <a class="btn btn-dark btnNav" href="https://x.com/aleenakhxn" alt="Twitter Icon" target="_blank" rel="noopener noreferrer">
+                                <svg class="svg-inline--fa fa-twitter fa-w-16 fa-fw" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                                    <path  fill="white" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+                                </svg>
+                            </a>
+                            <a class="btn btn-dark btnNav" href="https://www.linkedin.com/in/aleena-khan-06b90a78" alt="LinkedIn Icon" target="_blank" rel="noopener noreferrer">
+                                <svg class="svg-inline--fa fa-linkedin-in fa-w-14 fa-fw" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                                    <path fill="white" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </nav>
@@ -64,21 +148,21 @@
 
         <div class="d-flex row" style="margin:auto;align-items:center;">
         <!--First Column-->
-            <div class="d-flex col" style="margin:auto;max-width: 1800px;min-width: 800px;">
+            <div class="d-flex col" style="margin:auto;max-width:1800px;">
                 <div class="flex row" style="margin:auto;">
-                    <div class="d-flex justify-content-center" style="width:100%;height: auto">
+                    <div class="d-flex row justify-content-center" style="width:95%;height: auto">
                         <div style="align-self: center;">
                             <img class="headshot" src="images/headshot.jpg" alt="Headshot Photo"/>
                         </div>
                         <div style="align-self: center;">
-                            <div class="d-flex" style="flex-direction: column;text-align: center;">
-                                    <h2>Aleena Khan | PhD Candidate</h2>
-                                    <h3 class="UIUC-Name">University of Illinois</h3>
+                            <div class="d-flex" style="flex-direction: column;text-align:center;">
+                                    <h2 style="color:#222">Aleena Khan | PhD Candidate</h2>
+                                    <h3 class="UIUC-Name">University of Illinois Urbana-Champaign</h3>
                                     <h5>Department of Political Science</h5>
                                     <h5>American Government and Politics</h5>
                             </div>
                             <p></p>
-                            <div>
+                            <div style="margin-left: 5%;">
                                 <table class="table table-borderless table-hover table-sm">
                                     <thead>
                                         <tr>
@@ -107,10 +191,10 @@
                     <br>
                     <!--Bio Data and Research Agenda-->
                     <div class="d-flex col" style="min-height:fit-content; flex: 1;max-width: inherit;">
-                        <table class="table table-borderless" style="width:auto;margin-left:3%">
+                        <table class="table table-borderless" style="width:auto;">
                             <thead>
                                 <tr>
-                                    <th scope="col"><h4><Strong>Bio</Strong></h4></th>
+                                    <th scope="col"><h4 style="color:#222"><Strong>Bio</Strong></h4></th>
                                 </tr>
                             </thead>
                             <tbody class="table-group-divider" style="border-top: 2px solid #13294B;">
@@ -120,12 +204,12 @@
                             </tbody>
                             <thead>
                                 <tr>
-                                    <th scope="col"><h4><strong>Research Agenda</strong></h4></th>
+                                    <th scope="col"><h4 style="color:#222"><strong>Research Agenda</strong></h4></th>
                                 </tr>
                             </thead>
                             <tbody class="table-group-divider" style="border-top: 2px solid #13294B;">
                                 <tr>
-                                    <td scope="row" style="font-size: 1.05em">My research broadly centers on understanding inter- and intra-group dynamics and their consequences 
+                                    <td scope="row" style="font-size: 1.05em;width:inherit;">My research broadly centers on understanding inter- and intra-group dynamics and their consequences 
                                         for political attitudes, behavior, and policy preferences. More specifically, I am interested in how racial conceptions 
                                         of national identity drive a range of attitudes and behavior. My dissertation topic explores the dynamics between 
                                         national and partisan identities, focusing on two broad questions: (1) Who and what are perceived as threats to 
@@ -148,9 +232,9 @@
             </div>
             
             <!--Second Column-->
-            <div class="flex col" style="margin:auto;height:auto;min-width:fit-content;max-width:max-content;justify-content:left;text-align:left;padding-right:3%;">
+            <div class="flex col col2" >
                 <!--Awards and Recognition-->
-                <table class="table table-borderless table-sm" style="width:auto;margin-left:3%;min-width:max-content">
+                <table class="table table-borderless table-sm colAwards">
                     <thead>
                         <tr>
                             <th scope="col"><h5><Strong>Awards</Strong></h5></th>
@@ -158,21 +242,21 @@
                     </thead>
                     <tbody class="table-group-divider" style="border-top: 2px solid #13294B;">
                         <tr>
-                            <td>Polarization and Extremism Research and Innovation Lab Fellow | 2023</td>
+                            <td>Polarization and Extremism Research and Innovation Lab Fellow | 2023<p></p></td>
                         </tr>
                         <tr>
-                            <td>Electoral Integrity Project Fellow | 2023</td>
+                            <td>Electoral Integrity Project Fellow | 2023<p></p></td>
                         </tr>
                         <tr>
-                            <td>Public Scholar, American Political Science Association | 2021-2022</td>
+                            <td>Public Scholar, American Political Science Association | 2021-2022<p></p></td>
                         </tr>
                         <tr>
-                            <td>Teachers Ranked As Excellent, University of Illinois | Fall 2018, Spring 2020</td>
+                            <td>Teachers Ranked As Excellent, University of Illinois | Fall 2018, Spring 2020<p></p></td>
                         </tr>
                     </tbody>
                 </table>
                 <!--Education-->
-                <table class="table table-borderless table-sm" style="width:auto;margin-left:3%;min-width:max-content">
+                <table class="table table-borderless table-sm colEducation">
                     <thead>
                         <tr>
                             <th scope="col"><h5><Strong>Education</Strong></h5></th>
@@ -180,18 +264,18 @@
                     </thead>
                     <tbody class="table-group-divider" style="border-top: 2px solid #13294B;">
                         <tr>
-                            <td>Doctor of Philosophy in Political Science | University of Ilinois | Active</td>
+                            <td>Doctor of Philosophy in Political Science | University of Ilinois | Active<p></p></td>
                         </tr>
                         <tr>
-                            <td>Master of Arts in Political Science | University of Ilinois | 2024</td>
+                            <td>Master of Arts in Political Science | University of Ilinois | 2024<p></p></td>
                         </tr>
                         <tr>
-                            <td>Bachelor of Arts in Political Science | Simmons University | 2016</td>
+                            <td>Bachelor of Arts in Political Science | Simmons University | 2016<p></p></td>
                         </tr>
                     </tbody>
                 </table>
                 <!--Instruction and Teaching Table-->
-                <table class="table table-borderless table-sm" style="width:auto;margin-left:3%;min-width:max-content">
+                <table class="table table-borderless table-sm colInstruction">
                     <thead>
                         <tr>
                             <th scope="col"><h5><Strong>Instruction and Teaching</Strong></h5></th>
@@ -202,7 +286,7 @@
                             <th scope="row">Center for Innovation, Teaching, and Learning | University of Illinois</th>
                         </tr>
                         <tr>
-                            <td>Statistical Consultant | Fall 2022-Present</td>
+                            <td>Statistical Consultant | Fall 2022-Present <p></p></td>
                         </tr>
                         <tr>
                             <th scope="row">Independent Instructor | University of Illinois Department of Political Science</th>
@@ -211,7 +295,7 @@
                             <td>Government Internship | Fall 2021, Spring 2022</td>
                         </tr>
                         <tr>
-                            <td>US Racial & Ethnic Poltics | Fall 2021, Spring 2022</td>
+                            <td>US Racial & Ethnic Poltics | Fall 2021, Spring 2022<p></p></td>
                         </tr>
                         <tr>
                             <th scope="row">Graduate Teaching Assistant | University of Illinois Department of Political Science</th>
@@ -220,12 +304,12 @@
                             <td>Intro to US Government and Politics | Fall 2018, Spring 2020</td>
                         </tr>
                         <tr>
-                            <td>US Racial & Ethnic Poltics | Fall 2019</td>
+                            <td>US Racial & Ethnic Poltics | Fall 2019<p></p></td>
                         </tr>
                     </tbody>
                 </table>
                 <!--Pedagogy Table-->
-                <table class="table table-borderless table-sm" style="width:auto;margin-left:3%;min-width:max-content;">
+                <table class="table table-borderless table-sm colPedagogy">
                     <thead>
                         <tr>
                             <th scope="col"><h5><Strong>Teaching Pedagogy</Strong></h5></th>
@@ -235,7 +319,7 @@
                         <tr>
                             <td>Conceptual Foundation</td>
                             <td>Ethics and Responsibility</td>
-                            <td>Research Methodology</td>
+                            <td>Research Methodology <p></p></td>
                         </tr>
                         <tr>
                             <td>Scholarly Communication</td>
@@ -244,7 +328,7 @@
                     </tbody>
                 </table>
                 <!--Software Table-->
-                <table class="table table-borderless table-sm" style="width:auto;margin-left:3%;min-width:max-content">
+                <table class="table table-borderless table-sm colSoftware">
                     <thead>
                         <tr>
                             <th scope="col"><h5><Strong>Software</Strong></h5></th>
@@ -262,7 +346,7 @@
                     </tbody>
                 </table>
                 <!--Working Papers-->
-                <table class="table table-borderless table-sm" style="width:auto;margin-left:3%;min-width:max-content">
+                <table class="table table-borderless table-sm colWPapers">
                     <thead>
                         <tr>
                             <th scope="col"><h5><Strong>Working Papers</Strong></h5></th>
@@ -273,7 +357,7 @@
                             <th>Khan, Aleena, Moreira, Jair, & Steur, James.</th>
                         </tr>
                         <tr>
-                            <td> Vicarious Elite Contact & Cooperation: Reducing Affective Polarization in the U.S.</td>
+                            <td> Vicarious Elite Contact & Cooperation: Reducing Affective Polarization in the U.S.<p></p></td>
                         </tr>
                         <tr>
                             <th>Khan, A.</th>
@@ -289,7 +373,7 @@
         <br><br>
         
         <!-- Footer-->
-        <footer style="position: relative;bottom: 0;width:100%;max-width:100%;background-color: #949494;min-height: fit-content;">
+        <footer class="ftrow">
             <div class= "col align-self-center">
                 <div class="row">
                     <div class="row justify-content-between" style="width:100%">
@@ -304,7 +388,7 @@
                         </div>
                     </div>
                 </div>
-            <p style="text-align:right;margin: 0 0;font-size: 0.75em;">&copy; Copyright 2024. All rights reserved.</p>
+            <p class="cRight">&copy; Copyright 2024. All rights reserved.</p>
             <p></p>
         </footer>
         
